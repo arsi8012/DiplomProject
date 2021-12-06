@@ -78,7 +78,7 @@ public class PaymentTest {
         HeadingPage headingPage = new HeadingPage();
         PaymentPage paymentPage = headingPage.transitionPaymentPage();
         paymentPage.paymentData(DataHelper.invalidOwnerCard());
-        assertFalse(paymentPage.errorInputIsVisible(),"Неверный формат");
+        assertTrue(paymentPage.errorInputIsVisible(),"Неверный формат");
     }
 
     @Test // Сообщение об ошибке невалидных значениях в поле CVC 'Неверный формат'

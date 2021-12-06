@@ -36,12 +36,12 @@ public class PaymentPage {
     }
 
     public boolean messageSuccessIsVisible() {
-        messageSuccess.should(disappear, Duration.ofSeconds(20));
+        messageSuccess.waitUntil(visible, 12000);
         return true;
     }
 
     public boolean messageErrorIsVisible() {
-        messageError.should(disappear, Duration.ofSeconds(20));
+        messageError.waitUntil(visible, 12000);
         return true;
     }
 
